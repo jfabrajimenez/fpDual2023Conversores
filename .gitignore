@@ -1,11 +1,21 @@
+# Directorio de salida de Maven.
 target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://github.com/takari/maven-wrapper#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
+
+# Configuración de Eclipse.
+.metadata/
+.project
+.settings/
+.classpath
+
+# Configuración de Intellij IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Configuración de Netbeans
+*nb-configuration.xml
+nbproject/
+
+# Ficheros temporales de gitk
+/.gitk*/
