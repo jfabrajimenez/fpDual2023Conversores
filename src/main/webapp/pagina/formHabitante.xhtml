@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+  <h:head>
+  	<title>Habitante</title>
+  </h:head>
+ 
+  <h:body>
+  	<h:form id="formularioabitantes">
+  		<p:messages id="messages" showDetail="true" closable="true">
+	        <p:autoUpdate />
+	    </p:messages>
+	    
+	    <h:outputText value="NIF"/>
+	    <p:inputText id="nif" value="#{formularioHabitanteVista.nif}" />
+	    <p:spacer height="10px" width="100%"/>
+	    
+	    <h:outputText value="Nombre"/>
+	    <p:inputText id="nombre" value="#{formularioHabitanteVista.nombre}" />
+	    <p:spacer height="10px" width="100%"/>
+	    
+	    <h:outputText value="Primer  apellido"/>
+	    <p:inputText id="apellido1" value="#{formularioHabitanteVista.primerApellido}" />
+	    <p:spacer height="10px" width="100%"/>
+	    
+	    <h:outputText value="Segundo apellido"/>
+	    <p:inputText id="apellido2" value="#{formularioHabitanteVista.segundoApellido}" />
+	    <p:spacer height="10px" width="100%"/>
+	    
+	    <p:outputLabel for="fechaNacimiento" value="Fecha de nacimiento"/>
+        <p:datePicker id="fechaNacimiento" value="#{formularioHabitanteVista.fechaNacimiento}"
+                        monthNavigator="true"
+                        yearNavigator="true"
+                        showWeek="true"/>
+	    
+	    
+	    <p:commandButton id="submitButton" action="#{formularioHabitanteVista.guardar}" value="Guardar" />
+  	</h:form>
+  </h:body>
+</html>
